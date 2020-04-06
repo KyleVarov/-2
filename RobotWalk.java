@@ -2,32 +2,29 @@
 /**
  * Write a description of class RobotWalk here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * 2017605038 스피겔 크릴, 2018243144 노무라타카미치
+ * 2020/04/06
  */
 public class RobotWalk
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class RobotWalk
-     */
-    public RobotWalk()
-    {
-        // initialise instance variables
-        x = 0;
+    public static void main(String[] args){
+        double speed = 100;
+        String signal = "green";
+        
+        speed = RobotWalk(signal, speed);
+        
+        System.out.println("The traffic light: "+ signal + "\n" + "Robot speed = " + String.valueOf(speed)); 
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public static double RobotWalk(String signal, double speed){
+        
+        if(signal == "yellow"){
+            speed = speed * (1.2);
+        }
+        if(signal == "red"){
+            speed = 0;
+        
+        }
+        return speed;
     }
 }
