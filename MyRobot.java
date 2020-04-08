@@ -10,16 +10,15 @@ public class MyRobot
     public static void main(String[] args){
         double speed = 100;
         //String signal = "red";
-        String[] TestSignal = {"green", "red", "yellow", "123"}; //실험용 테스트 데이터 
+        String[] TestSignal = {"yellow","green", "red", "yellow", "123"}; //실험용 테스트 데이터 
         for (String temp : TestSignal){      
             speed = RobotWalk(speed, temp);
-            System.out.println("Traffic light: "+ temp);
-            System.out.println("Robot speed = " + String.valueOf(speed)); 
-            speed = 100; //원래 속도로 초기화시킴 
+            System.out.println("Robot speed = " + String.valueOf(speed));
+            speed = 100;
         }
     }
     public static double RobotWalk(double speed, String signal){
-        if(signal.equals("green")){
+        if(signal.equals("green")){ 
         }else{
             if(signal.equals("yellow")){
             speed = speed * (1.2);
@@ -27,7 +26,7 @@ public class MyRobot
                 if(signal.equals("red")){
                     speed = 0;
                 }else{
-                    System.out.println("Traffic light: 잘 못된 입력.");
+                    System.out.println("잘 못된 입력!");
         }
         }
         }
