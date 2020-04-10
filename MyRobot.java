@@ -8,15 +8,6 @@
  */
 public class MyRobot
 {
-    public static void main(String[] args){
-        double speed = 100;
-        String[] TestCases = {"green", "red", "yellow", "123"}; //실험용 테스트 데이터 
-        for (String signal : TestCases){      
-            speed = RobotWalk(speed, signal);
-            System.out.println("Robot speed = " + String.valueOf(speed));
-            speed = 100; //속도를 다시 100으로 초기화한다
-        }
-    }
     public static double RobotWalk(double speed, String signal){
         if(signal.equals("green")){ 
         }else{
