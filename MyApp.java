@@ -10,8 +10,16 @@ public class MyApp
 {
     public static void main(String[] args){
         double speed = 100;
-        String[] TestCases = {"green", "red", "yellow", "다른 입력"}; //실험용 테스트 데이터 
-        for (String signal : TestCases){      
+        String[] StatementCTestCases = {"red", "yellow"}; //Statement Coverage용 테스트 데이터 
+        String[] DecisionCTestCases = {"green", "red", "yellow", "다른 입력"}; //Decision Coverage용 테스트 데이터 
+        System.out.println("Statement Coverage Test:");
+        for (String signal : StatementCTestCases){      
+            speed = MyRobot.RobotWalk(speed, signal);
+            System.out.println("Traffic light: " + signal + " --> "+"Robot speed = " + String.valueOf(speed));
+            speed = 100; //속도를 다시 100으로 초기화한다
+        }
+        System.out.println("Decision Coverage Test:");
+        for (String signal : DecisionCTestCases){      
             speed = MyRobot.RobotWalk(speed, signal);
             System.out.println("Traffic light: " + signal + " --> "+"Robot speed = " + String.valueOf(speed));
             speed = 100; //속도를 다시 100으로 초기화한다
