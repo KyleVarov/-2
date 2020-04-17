@@ -8,19 +8,22 @@
  */
 public class MyRobot
 {
-    public static double RobotWalk(double speed, String signal){
+    private double speed = 100.0;
+    public void RobotWalk(double speed, String signal){
         if(signal.equals("green")){ 
         }else{
             if(signal.equals("red")){
-                speed = 0;
+                this.speed = 0;
             }else{
                 if(signal.equals("yellow")){
-                    speed = speed * (1.2);
+                    this.speed = speed * (1.2);
                 }
             }
         }
-        return speed;
     }
-}   
+    public double getSpeed(){
+        return this.speed;
+    }
+}       
     
 
