@@ -44,8 +44,12 @@ public class MyRobotTest
     public void getSpeed_test()
     {
         MyRobot myRobot1 = new MyRobot();
+        myRobot1.RobotWalk(100.0, "green");
+        assertEquals(100.0, myRobot1.getSpeed(), 0.1);
         myRobot1.RobotWalk(100.0, "yellow");
         assertEquals(120.0, myRobot1.getSpeed(), 0.1);
+        myRobot1.RobotWalk(100.0, "red");
+        assertEquals(0.0, myRobot1.getSpeed(), 0.1);
     }
 }
 
