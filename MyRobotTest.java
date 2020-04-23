@@ -6,10 +6,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * テストクラス MyRobotTest.
+ * MyRobot클래스에 있는 getSpeed메소드를 테스트하는 Test클래스입니다. 
  *
- * @author (あなたの名前)
- * @version (バージョン番号もしくは日付)
+ * 2017605038 스피겔 크릴, 2018243144 노무라타카미치
+ * 2020/04/23
  */
 public class MyRobotTest
 {
